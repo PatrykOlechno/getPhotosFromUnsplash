@@ -1,0 +1,23 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.form{
+  text-align: center;
+  margin: 20px;
+  font-size: 18px;
+}
+#random-image-container{
+  text-align: center;
+  margin: 40px;
+}
+.description{
+  font-size: 18px;
+  font-style: italic;
+}
+.author{
+  text-align: left;
+}
+.unsplash{
+  text-align: right;
+}
