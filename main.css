@@ -11,7 +11,19 @@ body{
   font-size: 18px;
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 40px;
+  transition: 0.5s;
+
 }
+.form-def{
+    transform: none;
+}
+.form-transformed{
+  transform-origin: bottom left;
+  transform: rotate(90deg);
+}
+
 #random-image-container{
   text-align: center;
   margin: 40px;
@@ -22,7 +34,7 @@ body{
 .description{
   font-size: 18px;
   font-style: italic;
-  margin: 10px;
+  margin-bottom: 20px;
 }
 img{
   max-width: 100%;
@@ -31,7 +43,7 @@ img{
 }
 a{
   text-decoration: none;
-  color: #ddd;                                  
+  color: #ddd;
 }
 #image-div{
   max-width:  70%;
