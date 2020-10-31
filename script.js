@@ -29,7 +29,7 @@ function getPhoto(number){
             result.results.forEach(img => {
               let div = document.createElement("div");
               div.innerHTML = `
-                      <p class="description">"${img.description}"</p>
+                      <p class="description">${img.description != null ? img.description : " " }</p>
                       <img src="${img.urls.regular}" height="auto">
                       <a href="${img.links.html}" target="_blank"><p class="info">${img.user.name} | Unsplash</p></a>
                        `;
@@ -45,7 +45,7 @@ function getRandomphoto(){
   .then(result => {
               console.log(result);
     imageDiv.innerHTML = `
-                            <p class="description">"${result.description}"</p>
+                            <p class="description">${result.description != null ? result.description : " " }</p>
                             <img src="${result.urls.regular}" height="auto">
                             <a href="${result.links.html}" target="_blank"><p class="info">${result.user.name} | Unsplash</p></a>`;
   })
@@ -53,8 +53,10 @@ function getRandomphoto(){
 }
 
 function dontBotherMe(){
-  form.className = "form-transformed";
-  if (form.className ==="form-transformed"){
-    form.className = "form-def";
-  }
+  form[0].classList.toggle('form-transformed');
+  if (form[0].bother.value == "Come back!"){
+    form[0].bother.value = "Don't Bother Me!"
+  }else{
+    form[0].bother.value = "Come back!"
+  };
 }

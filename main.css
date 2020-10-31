@@ -5,28 +5,29 @@ body{
   color: #ddd;
   font-size: 18px;
 }
+h5{
+  margin: 100px
+}
 .form{
-  text-align: center;
-  margin: 20px;
-  font-size: 18px;
   display: flex;
   justify-content: center;
+  margin: 20px;
+  font-size: 18px;
   position: fixed;
-  top: 40px;
-  transition: 0.5s;
-
-}
-.form-def{
-    transform: none;
+  top: 10px;
+    transition: 1s;
 }
 .form-transformed{
+  display: flex;
+  justify-content: center;
+  transition: 1s;
   transform-origin: bottom left;
   transform: rotate(90deg);
 }
 
 #random-image-container{
   text-align: center;
-  margin: 40px;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -34,7 +35,8 @@ body{
 .description{
   font-size: 18px;
   font-style: italic;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 img{
   max-width: 100%;
@@ -79,4 +81,20 @@ input[type=button]:hover{
 }
 input[type=button] > #randomBtn{
   background-color: #AFD275
+}
+
+@media (max-width: 650px) {
+  input#bother{
+    display: none;
+  }
+  input#randomBtn{
+    border-radius: 0 20px 20px 0;
+  }
+  input#searchBtnTen{
+    display: none;
+  }
+  #main{
+    display: flex;
+    justify-content: center;
+  }
 }
