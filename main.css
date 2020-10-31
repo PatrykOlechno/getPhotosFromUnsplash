@@ -1,23 +1,70 @@
 body{
   margin: 0;
   padding: 0;
+  background: #1A1A1D;
+  color: #ddd;
+  font-size: 18px;
 }
 .form{
   text-align: center;
   margin: 20px;
   font-size: 18px;
+  display: flex;
+  justify-content: center;
 }
 #random-image-container{
   text-align: center;
   margin: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .description{
   font-size: 18px;
   font-style: italic;
+  margin: 10px;
 }
-.author{
-  text-align: left;
+img{
+  max-width: 100%;
+  width: auto;
+  height: 50vh auto;
 }
-.unsplash{
+a{
+  text-decoration: none;
+  color: #ddd;                                  
+}
+#image-div{
+  max-width:  70%;
+  margin: 0 auto;
+}
+.info{
   text-align: right;
+  margin: 1px;
+  font-size: 14px;
+}
+input{
+  height: 46px;
+  font-size: 18px;
+  margin: 20px 0;
+  padding: 0 10px;
+  transition-duration: 0.4s;
+  border: none;
+  border-radius: 0;
+}
+input:last-child{
+  border-radius: 0 20px 20px 0;
+}
+input:first-child{
+  border-radius: 20px 0 0 20px;
+}
+input[type=button]{
+  height: 46px;
+}
+input[type=button]:hover{
+  background-color: #AFD275;
+  color: #222629;
+  border-color: #AFD275;
+}
+input[type=button] > #randomBtn{
+  background-color: #AFD275
 }

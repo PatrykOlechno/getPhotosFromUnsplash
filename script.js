@@ -1,7 +1,8 @@
 let searchBtn = document.getElementById("searchBtn");
 let main = document.getElementById('main')
-let RandomImgContainer = document.getElementById("random-image-container");
+let imageDiv = document.getElementById("image-div");
 let description = document.getElementById("description");
+let info = document.getElementsByClassName("info");
 
 searchBtn.addEventListener("click", getPhoto);
 randomBtn.addEventListener("click", getRandomphoto);
@@ -38,8 +39,9 @@ function getRandomphoto(){
   .then(result => {
     let image = result.urls.regular;
     description = result.description;
-    RandomImgContainer.innerHTML = `
-                            <img src="${image}" height="400px">
+    imageDiv.innerHTML = `
+                            <img src="${image}" height="auto">
+                            <a href="${result.links.photos}"><p class="info">"${result.username} | Unsplash"</p></a>
                             <p class="description">"${description}"</p>`;
   })
   .catch(error => console.log(error));
